@@ -244,7 +244,7 @@ The complete GUIDE dataset is available on HuggingFace:
 
 | Component | Description | Size |
 |-----------|-------------|------|
-| `videos/` | ~427 tutorial videos across 10 application domains, organized by app. Each video includes: MP4 file, yt-dlp metadata JSON, subtitles, extracted audio, ASR transcription, keyframes, OmniParser UI element annotations, and GPT-5.1 action annotations (Planning + Grounding). | ~21 GB |
+| `videos/` | 319 video directories (457 MP4 files) across 10 application domains. Each video includes: MP4 file, yt-dlp metadata JSON, subtitles, extracted audio, ASR transcription, keyframes, OmniParser UI element annotations, and action annotations. The default annotation directory `Labeled_gpt-4.1/` contains **GPT-5.1** annotations (legacy naming); some videos also include ablation annotations from Qwen3-VL-8B (50), GPT-4.1-Mini (50), and Seed-1.8 (33). | ~21 GB |
 | `urls/` | YouTube URL lists for all 70 app/query combinations used in retrieval. | ~3 MB |
 | `converted_results/` | Pre-computed Planning and Grounding knowledge for all 361 OSWorld tasks, ready for direct injection into agents. | ~4.5 MB |
 | `video_verification_report.json` | Data integrity verification report (361 tasks, 298 matched, coverage statistics). | <1 MB |

@@ -41,10 +41,19 @@ GUIDE (GUI Unbiasing via Instructional-Video Driven Expertise) is a training-fre
 | `audios_text/` | ASR transcription from OpenAI Whisper (base model, word-level timestamps) |
 | `keyframes_*/` | Extracted keyframes (uniform sampling + MOG2 background subtraction) |
 | `OmniParser_Pic/` | UI element detection results from OmniParser (bounding boxes, element types, text labels) |
-| `Labeled_gpt-4.1/` | Action annotations from VLM inverse dynamics inference |
+| `Labeled_gpt-4.1/` | **Default annotations (annotated by GPT-5.1)**. The directory is named `gpt-4.1` for historical reasons; the actual annotation model is GPT-5.1 as stated in the paper. |
 | `Labeled_gpt-4.1/consolidated/` | Consolidated per-video annotations (Thought & Action NLP) |
 | `Labeled_gpt-4.1/divided/planning/` | Extracted Planning knowledge per video |
 | `Labeled_gpt-4.1/divided/grounding/` | Extracted Grounding knowledge per video |
+
+**Note on annotation model naming**: The default annotation directory `Labeled_gpt-4.1` is a legacy name; the actual model used is **GPT-5.1** (as described in the paper's Implementation Details). Some videos additionally contain annotations from alternative models used in the annotator ablation study:
+
+| Directory Name | Actual Model | Count | Purpose |
+|----------------|-------------|-------|---------|
+| `Labeled_gpt-4.1/` | **GPT-5.1** | 319 (all videos) | Default annotations for main experiments (Table 1) |
+| `Labeled_qwen3vl-8b/` | Qwen3-VL-8B | 50 | Annotator ablation study (Table 2b) |
+| `Labeled_gpt-4.1-mini-2025-04-14/` | GPT-4.1-Mini | 50 | Annotator ablation study (Table 2b) |
+| `Labeled_seed1.8/` | Seed-1.8 | 33 | Annotator ablation study (Table 2b) |
 
 ### 2. Video URLs (`urls/`, ~3 MB)
 
@@ -95,7 +104,8 @@ Data integrity report: 361 total tasks, 298 matched with downloaded videos, cove
 | Total OSWorld tasks | 361 |
 | Tasks with retrieved videos | 299 (82.8%) |
 | Tasks with 2+ videos | 42.7% |
-| Total annotated videos | ~427 |
+| Total video directories | 319 |
+| Total video files (MP4) | 457 |
 | Application domains | 10 |
 | Total video data size | ~21 GB |
 | Annotation model | GPT-5.1 (default) |
