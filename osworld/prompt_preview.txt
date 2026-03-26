@@ -1,0 +1,155 @@
+====================================================================================================
+Qwen3VL Agent Complete Prompt Preview
+====================================================================================================
+
+[Video Knowledge Section]
+----------------------------------------------------------------------------------------------------
+
+
+# External Knowledge from Similar Tasks
+
+## Video Planning Reference (Optional Guidance)
+
+You are provided with planning trajectories from demonstration videos of similar tasks. These serve as **reference materials only** and should be used with caution.
+
+**IMPORTANT: Use as Reference, Not Instruction**:
+- The video planning is a **suggestion**, not a requirement - always prioritize your own analysis of the current task and screenshot
+- Video demonstrations may differ from your actual task in important ways (different data, different UI state, different requirements)
+- **Only use video planning when**:
+  * The task is highly similar (same application, same type of operation, same general workflow)
+  * The planning clearly aligns with your current task requirements
+  * You can verify each suggested step applies to your specific situation
+
+**How to Use Video Planning Safely**:
+- **Extract General Patterns**: Look for overall methodology and common approaches, not specific click sequences
+- **Verify Applicability**: Before following any suggestion, confirm it makes sense for your current screenshot and task
+- **Adapt Critically**: Modify the approach to fit your specific requirements - never blindly follow steps
+- **Be Alert to Differences**: Watch for mismatches in application version, UI layout, data format, or task details
+- **Trust Your Analysis**: If the video planning conflicts with what you observe in the screenshot, trust the screenshot
+
+**When to Ignore Video Planning**:
+- Low relevance: Different application, different operation type, or different workflow
+- Conflicts with current state: Video planning suggests actions that don't match your screenshot
+- Unclear or ambiguous: If you're unsure whether the planning applies, default to your own analysis
+
+**Video Planning for Similar Tasks**:
+The planning trajectory of Demo 1: How To Fix Missing File Privileges On Steam:
+**task**: How To Fix Missing File Privileges On Steam
+
+**Execution Flow & Planning**  
+The resolution process for fixing missing file privileges on Steam follows a structured workflow, beginning with identifying the affected game(s) within the user’s Steam Library to ensure the correct titles are handled. Next, the user fully exits Steam to allow for a clean restart with elevated permissions. Steam is then relaunched...
+
+## Video Grounding Reference (UI Elements from Similar Tasks)
+
+You are provided with descriptions of GUI elements from demonstration videos of similar tasks. These descriptions include element appearance, position, and function.
+
+**IMPORTANT: Use with Caution**:
+- These GUI element descriptions come from **similar but different tasks** and may not match your current UI
+- Element positions, appearances, and even availability may differ in your current task
+- Use these descriptions as **hints about what to look for**, not as precise instructions
+
+**How to Use Video Grounding Safely**:
+- **Understand Element Purpose**: Learn what types of UI elements are typically used for this kind of task
+- **Verify Against Screenshot**: Always check if described elements actually exist in your current screenshot
+- **Adapt to Current UI**: If element positions or appearances differ, trust what you see in the screenshot
+- **Look for Analogous Elements**: If described elements don't exist, look for similar elements that serve the same purpose
+
+**When to Ignore Video Grounding**:
+- Element doesn't exist in current screenshot
+- Element position doesn't match the description
+- Element appearance is significantly different
+- The described workflow doesn't apply to your task
+
+**GUI Elements from Similar Tasks**:
+The grounding trajectory of Demo 1: How To Fix Missing File Privileges On Steam:
+1. Icon/Control: "Game List Scroll Control"  
+   - Appearance and Position: Manipulated via mouse scroll wheel or click-drag within a narrow vertical pane on the far left of Steam’s window, showing light-on-dark rectangular slots with text labels for each installed game.  
+   - Predicted Function and Related Task Operations: Scrolls the installed games list to reveal titles below, enabling selection of specific game...
+
+----------------------------------------------------------------------------------------------------
+
+[Video Planning Full Content]
+----------------------------------------------------------------------------------------------------
+The planning trajectory of Demo 1: How To Fix Missing File Privileges On Steam:
+**task**: How To Fix Missing File Privileges On Steam
+
+**Execution Flow & Planning**  
+The resolution process for fixing missing file privileges on Steam follows a structured workflow, beginning with identifying the affected game(s) within the user’s Steam Library to ensure the correct titles are handled. Next, the user fully exits Steam to allow for a clean restart with elevated permissions. Steam is then relaunched specifically using "Run as administrator," leveraging Windows Search and the Start Menu to guarantee administrative access, which is essential to bypass possible file/folder restrictions that may cause privilege errors. Once Steam is running with elevated permissions, the process advances to adjusting application-level settings: the user accesses the main Settings menu, navigates to the Downloads section, and changes the content server’s download region to a more appropriate local option, mitigating the risk that region-specific issues are interfering with downloads.
+
+To further clear possible sources of error, the user is prompted to clear the Steam download cache, though this step is made optional by an explicit opportunity to cancel out of the cache clearing confirmation if desired. Once regional and cache settings have been addressed, the workflow shifts to game-specific troubleshooting: within the Library, the targeted game (e.g., Tabletop Simulator) is located, and its properties dialog is opened to access the Installed Files section. Here, the integrity of the installed game files is verified—this automated process checks for missing or corrupted files, repairing them as necessary. Upon successful validation, the user exits the properties overlay, returning to the main game interface, confident that both platform and game-level file permissions have been addressed through a comprehensive cycle of environment adjustment, settings configuration, and file repair.
+
+**Key Considerations**  
+- Always run Steam as an administrator to prevent privilege-related errors during updates or repairs.  
+- Changing the download region can resolve issues caused by overloaded or faulty content servers.  
+- Clearing the download cache may cause Steam to restart and require login again; ensure credentials are ready if proceeding.  
+- Verifying game file integrity is essential for resolving installation or launch issues but requires patience as the process completes.  
+- Take care to select the correct game in the library, especially when multiple versions are installed.  
+- Only proceed with cache clearing if other steps have not resolved the issue, to avoid unnecessary re-login interruptions.  
+- Confirm changes and fully close overlay dialogs to ensure all updates and repairs are correctly applied.
+
+----------------------------------------------------------------------------------------------------
+
+[Video Grounding Full Content]
+----------------------------------------------------------------------------------------------------
+The grounding trajectory of Demo 1: How To Fix Missing File Privileges On Steam:
+1. Icon/Control: "Game List Scroll Control"  
+   - Appearance and Position: Manipulated via mouse scroll wheel or click-drag within a narrow vertical pane on the far left of Steam’s window, showing light-on-dark rectangular slots with text labels for each installed game.  
+   - Predicted Function and Related Task Operations: Scrolls the installed games list to reveal titles below, enabling selection of specific games (e.g., Warhammer). Typically used for navigating to the desired game entry when troubleshooting.
+
+2. Icon/Control: "Window Close Button (Steam app)"  
+   - Appearance and Position: Small dark rectangle with a white/light X symbol at the top-right corner of the Steam application window.  
+   - Predicted Function and Related Task Operations: Exits and shuts down Steam desktop application. Clicked to fully close out Steam before relaunching or performing system-level operations.
+
+3. Icon/Control: "Windows Search Bar"  
+   - Appearance and Position: White horizontal bar labeled "Type here to search" with subdued gray placeholder text, located at the very bottom-left corner of the Windows desktop above taskbar icons.  
+   - Predicted Function and Related Task Operations: Activates search input for typing application or file names. Used in the task to locate and launch Steam, often with extra options for administrative access.
+
+4. Icon/Control: "Steam App Search Result"  
+   - Appearance and Position: Entry with a blue-circled app icon and bold label “Steam App” appearing in the quick-launch results panel above the search bar after typing "steam".  
+   - Predicted Function and Related Task Operations: Represents the detected Steam application; can be clicked or right-clicked for further actions. Used to initiate launch options, such as running as administrator.
+
+5. Icon/Control: "Run as Administrator Button/Option"  
+   - Appearance and Position: Rectangular button labeled ‘Run as administrator’ at upper-middle left within Windows context menu overlay, typically highlighted; found directly beneath 'Best match > Steam App' in search results.  
+   - Predicted Function and Related Task Operations: Launches Steam with elevated privileges. Clicked to allow Steam access to restricted system resources to resolve file permissions issues.
+
+6. Icon/Control: "Steam Main Menu ('Steam' Button)"  
+   - Appearance and Position: White text label “Steam” acting as a button at the far upper left corner, positioned on a small horizontal dark bar above the main navigation tabs (Store, Library, etc.) of the Steam client.  
+   - Predicted Function and Related Task Operations: Opens the Steam application main dropdown menu. Used to access global settings including downloads, account, and application-wide options.
+
+7. Icon/Control: "Settings Menu Item (Dropdown)"  
+   - Appearance and Position: Dropdown item labeled "Settings" within the Steam menu, located toward the upper portion of the opened list just beneath where "Steam" was clicked; appears as a white or light-text entry on a dark background.  
+   - Predicted Function and Related Task Operations: Opens Steam's settings dialog box for adjusting configuration options related to downloads, storage, and permissions.
+
+8. Icon/Control: "Settings Sidebar (Category Buttons)"  
+   - Appearance and Position: Left-side vertical stack of rectangular grayish buttons within the Steam Settings dialog; includes labels such as Account, Family, Security, Interface, Library, Downloads, Storage. 'Downloads' appears mid-menu and may be highlighted by a glow or cursor.  
+   - Predicted Function and Related Task Operations: Switches detail panels to corresponding settings category. Used to access and adjust download-specific options by clicking ‘Downloads’.
+
+9. Icon/Control: "Download Region Dropdown Selector"  
+   - Appearance and Position: Drop-down menu labeled ‘Download Region’ located at the upper mid-to-right side of the Downloads settings panel; options shown as dark rectangles with white text, cities listed vertically, e.g., UK – London, Turkey – Izmir.  
+   - Predicted Function and Related Task Operations: Selects the active content server location for downloads. Clicked to change region and potentially resolve privilege or connection errors.
+
+10. Icon/Control: "Clear Download Cache Button"  
+    - Appearance and Position: Large prominent rectangular black/dark gray button labeled "Clear Download Cache," located at the middle-to-lower right area of the Downloads settings section.  
+    - Predicted Function and Related Task Operations: Initiates cache clearing to resolve download or launch problems. Clicked to erase locally cached Steam download data and prompt for confirmation.
+
+11. Icon/Control: "Confirm Button (Clear Download Cache Popup)"  
+    - Appearance and Position: Blue rectangular button labeled "Confirm," situated at the bottom-right of the "Clear Download Cache" confirmation pop-up window.  
+    - Predicted Function and Related Task Operations: Authorizes cache clearing and initiates Steam restart. Clicked to proceed with deleting cache and logging out as part of the fix process.
+
+12. Icon/Control: "Cancel Button (Clear Download Cache Popup)"  
+    - Appearance and Position: Gray rectangular button labeled "Cancel" next to "Confirm," located at the bottom-right of the confirmation popup.  
+    - Predicted Function and Related Task Operations: Cancels the cache clearing operation and closes the confirmation dialog. Used to dismiss the popup without making changes.
+
+13. Icon/Control: "Installed Games List (Steam Library Sidebar Entry)"  
+    - Appearance and Position: Rectangular slot listing for a game (e.g., 'Tabletop Simulator'), with icon, white text label, possibly highlighted with a blue strip; located among vertical list of games in the Steam Library’s far left pane.  
+    - Predicted Function and Related Task Operations: Selects a specific game for property and file management operations. Right-clicked to access game options/properties, including file integrity checks.
+
+14. Icon/Control: "Game Properties Tabs (General, Updates, Installed Files)"  
+    - Appearance and Position: Vertically stacked rectangular buttons labeled General, Updates, Installed Files inside the game properties dialog—center-left sidebar with light backgrounds and bold headings.  
+    - Predicted Function and Related Task Operations: Switches the detail panel for a game's configuration and maintenance options. Clicked to access installed files or update settings for the selected game.
+
+15. Icon/Control: "Verify Integrity Button/Link"  
+    - Appearance and Position: Prominent outlined blue button or underlined link marked as “Verify Integrity…” or similar, located near top-center or mid-right inside the Installed Files section of game properties.  
+    - Predicted Function and Related Task Operations: Starts the process of checking and repairing missing/corrupt files for a selected game. Clicked to initiate validation and wait for progress/completion feedback.
+
+----------------------------------------------------------------------------------------------------

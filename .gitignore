@@ -1,0 +1,45 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Data (uploaded to HuggingFace)
+videos/
+videos_test_version/
+urls/
+
+# Cookies and credentials
+cookies*.txt
+cookies*.json
+*.cookie
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+output/
+
+# Models (too large for git)
+*.pt
+*.pth
+*.bin
+*.safetensors

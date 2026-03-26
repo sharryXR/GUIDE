@@ -1,0 +1,18 @@
+# GUIDE Configuration Example
+# Copy this file to config.yaml and fill in your values
+
+# OSWorld evaluation server
+osworld:
+  base_url: "http://YOUR_SERVER_IP:YOUR_PORT"
+
+# Video annotation settings
+annotation:
+  model: "gpt-4.1-2025-04-14"  # or "qwen3-vl-8b-thinking", "qwen2.5-vl-32b-instruct"
+  keyframe_count: 15            # Number of keyframes per video
+  max_videos_per_query: 3       # Maximum videos to retrieve per task
+
+# Conda environments (adjust paths as needed)
+conda:
+  base_path: "~/anaconda3"      # or ~/miniconda3
+  pipeline_env: "guide"         # Environment for main pipeline
+  omniparser_env: "omni"        # Environment for OmniParser

@@ -1,0 +1,26 @@
+{
+  "chrome": [
+    "bb5e4c0d-f964-439c-97b6-bdb9747de3f4",
+    "7b6c7e24-c58a-49fc-a5bb-d57b80e5b4c3",
+    "a96b564e-dbe9-42c3-9ccf-b4498073438a",
+    "44ee5668-ecd5-4366-a6ce-c1c9b8d4e938",
+    "480bcfea-d68f-4aaa-a0a9-2589ef319381"
+  ],
+  "gimp": [
+    "f4aec372-4fb0-4df5-a52b-79e0e2a5d6ce",
+    "7b7617bd-57cc-468e-9c91-40c4ec2bcb3d"
+  ],
+  "libreoffice_calc": [
+    "357ef137-7eeb-4c80-a3bb-0951f26a8aff",
+    "abed40dc-063f-4598-8ba5-9fe749c0615d",
+    "51719eea-10bc-4246-a428-ac7c433dd4b3",
+    "f9584479-3d0d-4c79-affa-9ad7afdd8850"
+  ],
+  "libreoffice_impress": [
+    "5d901039-a89c-4bfb-967b-bf66f4df075e",
+    "550ce7e7-747b-495f-b122-acdc4d0b8e54",
+    "af23762e-2bfd-4a1d-aada-20fa8de9ce07",
+    "9ec204e4-f0a3-42f8-8458-b772a6797cab",
+    "0f84bef9-9790-432e-92b7-eece357603fb"
+  ]
+}
