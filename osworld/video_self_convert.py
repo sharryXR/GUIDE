@@ -54,7 +54,7 @@ def run_cmd2_only(web, query):
         print(f"✗ [CMD2] Timed out")
         return False
 
-def run_cmd3_only(web, query, model="gpt-4.1"):
+def run_cmd3_only(web, query, model="gpt-5.1"):
     """只执行cmd3：动作标注和轨迹生成，返回结果"""
     print(f"[CMD3] Processing {web}: {query}")
     conda_base = os.path.expanduser("~/anaconda3")
@@ -109,7 +109,7 @@ def run_cmd3_only(web, query, model="gpt-4.1"):
         print(f"✗ [CMD3] Timed out")
         return None
 
-def auto_convert(web, query,model="gpt-4.1"):
+def auto_convert(web, query,model="gpt-5.1"):
     """
     自动转换函数，接收 web 和 query 参数。
     """

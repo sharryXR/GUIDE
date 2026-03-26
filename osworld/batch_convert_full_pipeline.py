@@ -103,7 +103,7 @@ def main():
                 if not item.get('cmd3_completed', False):
                     print(f"  → 执行 CMD3: LLM轨迹生成...")
                     log.write(f"\n--- CMD3 开始 ---\n")
-                    result3 = run_cmd3_only(web, query, model="gpt-4.1")
+                    result3 = run_cmd3_only(web, query, model="gpt-5.1")
                     # result3返回的是tuple: (planning_results, grounding_results)
                     if result3 and isinstance(result3, tuple) and len(result3) == 2:
                         planning_results, grounding_results = result3

@@ -107,7 +107,7 @@ def get_llm(model_name):
     #         temperature=1.0,
     #     )
     #     return llm
-    elif model_name == "gpt-4.1":
+    elif model_name == "gpt-5.1":
         return llm4
     elif model_name == "gpt-5":
         return llm5
@@ -946,7 +946,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run Action Annotation with specified web and query.")
     parser.add_argument('--web', type=str, required=True, help='The web application to use.')
     parser.add_argument('--query', type=str, required=True, help='The query to process.')
-    parser.add_argument('--model_name', type=str, default="gpt-4.1", help='The model name to use.')
+    parser.add_argument('--model_name', type=str, default="gpt-5.1", help='The model name to use.')
     args = parser.parse_args()
 
     # model_name = args.model_name
