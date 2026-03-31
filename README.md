@@ -5,11 +5,19 @@
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2603.26266"><img src="https://img.shields.io/badge/arXiv-2603.26266-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow" alt="Dataset"></a>
+  <a href="https://github.com/sharryXR/GUIDE"><img src="https://img.shields.io/badge/GitHub-Code-blue?logo=github" alt="Code"></a>
+  <a href="#license"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2603.26266">Paper</a> |
+  <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset">Dataset</a> |
   <a href="#installation">Installation</a> |
   <a href="#quick-start">Quick Start</a> |
   <a href="#pipeline-overview">Pipeline</a> |
   <a href="#evaluation-on-osworld">Evaluation</a> |
-  <a href="#dataset">Dataset</a> |
   <a href="#citation">Citation</a>
 </p>
 
@@ -358,13 +366,13 @@ GUIDE/
 
 ## Citation
 
-The paper is currently under anonymous review. The arXiv preprint and full citation will be available soon.
+If you find this work useful, please cite our paper:
 
 ```bibtex
-@article{guide2026,
+@article{xie2026guide,
   title={{GUIDE}: Resolving Domain Bias in {GUI} Agents through Real-Time Web Video Retrieval and Plug-and-Play Annotation},
-  author={Anonymous},
-  journal={arXiv preprint},
+  author={Xie, Rui and Gao, Zhi and Shi, Chenrui and Shang, Zirui and Chen, Lu and Li, Qing},
+  journal={arXiv preprint arXiv:2603.26266},
   year={2026}
 }
 ```
