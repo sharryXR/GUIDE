@@ -38,6 +38,12 @@ Thumbs.db
 *.log
 output/
 
+# WindowsAgentArena runtime artifacts
+windows_agent_arena/**/logs/
+windows_agent_arena/**/*status.json
+windows_agent_arena/**/*pending.json
+windows_agent_arena/**/*.report.json
+
 # Models (too large for git)
 *.pt
 *.pth
