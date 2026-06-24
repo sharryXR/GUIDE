@@ -5,10 +5,16 @@
 </p>
 
 <p align="center">
+  <a href="https://eccv.ecva.net/"><img src="https://img.shields.io/badge/ECCV-2026%20Accepted-673ab7.svg" alt="ECCV 2026 Accepted"></a>
   <a href="https://arxiv.org/abs/2603.26266"><img src="https://img.shields.io/badge/arXiv-2603.26266-b31b1b.svg" alt="arXiv"></a>
   <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow" alt="Dataset"></a>
+  <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset"><img src="https://img.shields.io/huggingface/datasets/dm/sharryXR/GUIDE-dataset?label=downloads%2Fmonth" alt="Hugging Face monthly downloads"></a>
   <a href="https://github.com/sharryXR/GUIDE"><img src="https://img.shields.io/badge/GitHub-Code-blue?logo=github" alt="Code"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <strong>Accepted to ECCV 2026</strong>
 </p>
 
 <p align="center">
