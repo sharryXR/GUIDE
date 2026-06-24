@@ -18,6 +18,7 @@
   <a href="#quick-start">Quick Start</a> |
   <a href="#pipeline-overview">Pipeline</a> |
   <a href="#evaluation-on-osworld">Evaluation</a> |
+  <a href="#windowsagentarena-support">WAA Support</a> |
   <a href="#citation">Citation</a>
 </p>
 
@@ -36,6 +37,10 @@ Large vision-language models have endowed GUI agents with strong general capabil
 | **Seed-1.8** | Single-model (closed) | 37.14% | 43.93% | **44.62%** | **+7.48pp** |
 | **Qwen3-VL-8B** | Single-model (open, 8B) | 33.90% | 38.93% | **39.73%** | **+5.83pp** |
 | **AgentS3** | Multi-agent (GPT-5.2 + Seed-1.8) | 50.18% | -- | **54.65%** | **+4.47pp** |
+
+### WindowsAgentArena Support
+
+GUIDE also supports [WindowsAgentArena](https://github.com/microsoft/WindowsAgentArena) through a lightweight adapter under [`windows_agent_arena/`](windows_agent_arena/). On the 154-task WAA split, GUIDE improves Agents3+GPT-5.2 from **49.00% to 59.21%** and Qwen3-VL-32B-Instruct from **31.70% to 44.16%**.
 
 ---
 
