@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <strong>News:</strong> GUIDE has been accepted to <strong>ECCV 2026</strong>.
+  🎉 <strong>News:</strong> GUIDE has been accepted to <strong>ECCV 2026</strong>! 🏆✨
 </p>
 
 <p align="center">
