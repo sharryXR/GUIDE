@@ -131,37 +131,59 @@
 
         <figure class="panel" id="lp1" data-step="1" role="tabpanel" aria-label="Retrieve" hidden>
           <div class="funnel"><b>50+</b><span>&rarr;</span><b>~15</b><span>&rarr;</span><b class="hit">&le;2</b></div>
+          <div class="rag-stages">
+            <span class="rag-st"><i class="tick">&#10003;</i> 1 · Domain Classification <em>GUI demo</em></span>
+            <span class="rag-st"><i class="tick">&#10003;</i> 2 · Topic Extraction <em>"adjust contrast in GIMP"</em></span>
+            <span class="rag-st"><i class="tick">&#10003;</i> 3 · Relevance Matching <em>0.92</em></span>
+          </div>
+          <div class="sub-snip">&#9202; subtitle: <i>"…now open the <b>Colors</b> menu and choose <b>Brightness-Contrast</b>…"</i></div>
           <div class="ytcard"><span class="thumb"></span>How to Add Contrast to Photos in GIMP<em class="score">0.92</em></div>
-          <figcaption>Subtitle-driven Video-RAG searches YouTube live and filters in three stages.</figcaption>
+          <figcaption>Subtitle-driven Video-RAG searches YouTube live, then filters candidates through three subtitle-based stages.</figcaption>
         </figure>
 
         <figure class="panel" id="lp2" data-step="2" role="tabpanel" aria-label="Annotate" hidden>
           <div class="kf-pair">
-            <img src="static/images/gimp_colors_menu.jpg" alt="GIMP with the Colors menu open" loading="lazy" width="1280" height="720">
-            <span class="act-arrow">Action?</span>
-            <img src="static/images/gimp_bc_dialog.jpg" alt="GIMP Brightness-Contrast dialog with sliders" loading="lazy" width="1280" height="720">
+            <img src="static/images/anno_kf1.jpg" alt="Keyframe s_t: GIMP Colors menu with OmniParser-detected UI elements boxed and numbered" loading="lazy" width="960" height="556">
+            <span class="act-arrow"><i>f</i><sub>VPA</sub><br>infer<br>action</span>
+            <img src="static/images/anno_kf2.jpg" alt="Keyframe s_t+1: Brightness-Contrast dialog with OmniParser-detected UI elements boxed and numbered" loading="lazy" width="960" height="556">
           </div>
-          <figcaption>A VLM infers the action between consecutive keyframes <code>s<sub>t</sub> &rarr; s<sub>t+1</sub></code>, aided by UI element graphs and subtitles.</figcaption>
+          <figcaption>OmniParser detects UI elements (cyan boxes) in each keyframe; the VLM compares the consecutive pair <code>s<sub>t</sub> &rarr; s<sub>t+1</sub></code> with their element graphs <code>E<sub>t</sub>, E<sub>t+1</sub></code> and subtitle context to infer the action &mdash; <em>"click Brightness-Contrast."</em></figcaption>
         </figure>
 
         <figure class="panel" id="lp3" data-step="3" role="tabpanel" aria-label="Knowledge" hidden>
           <div class="kcards">
-            <div class="kcard plan"><div class="ktag">Planning</div><div class="kbody">Open Brightness-Contrast via the <b>Colors</b> menu &mdash; not Image &rarr; Adjustments.</div></div>
-            <div class="kcard ground"><div class="ktag">Grounding</div><div class="kbody">Horizontal <b>Contrast</b> slider, beneath Brightness, inside the dialog.</div></div>
+            <div class="kcard plan">
+              <div class="ktag">Planning &mdash; the workflow</div>
+              <ol class="ksteps">
+                <li>Duplicate the original layer</li>
+                <li>Open <b>Colors &rarr; Brightness-Contrast</b></li>
+                <li>Drag the Contrast slider up</li>
+                <li>Confirm with <b>OK</b></li>
+              </ol>
+              <div class="knote">Key note: in GIMP, contrast is under <b>Colors</b>, <u>not</u> the Image menu.</div>
+            </div>
+            <div class="kcard ground">
+              <div class="ktag">Grounding &mdash; the elements</div>
+              <ul class="kels">
+                <li><b>Contrast slider</b> &mdash; horizontal bar labeled "Contrast", beneath "Brightness"</li>
+                <li><b>Brightness-Contrast</b> &mdash; 8th item in the Colors menu</li>
+                <li><b>OK</b> &mdash; confirm button, lower-right of dialog</li>
+              </ul>
+            </div>
           </div>
-          <figcaption>One trajectory is decomposed into two coordinate-free channels.</figcaption>
+          <figcaption>One trajectory is decomposed into two complementary, coordinate-free channels.</figcaption>
         </figure>
 
         <figure class="panel" id="lp4" data-step="4" role="tabpanel" aria-label="Act" hidden>
           <div class="act-compare">
             <div class="act-card bad">
               <span class="act-label">&#10007; Unguided</span>
-              <img src="static/images/crop_image_menu.jpg" alt="Agent opens GIMP's Image menu, which has no contrast control" loading="lazy" width="750" height="1013">
+              <img src="static/images/anno_image.jpg" alt="Annotated: agent opens GIMP's Image menu, marked as having no contrast control" loading="lazy" width="609" height="699">
               <p>Guesses <code>Image &rarr; Adjustments</code>, a Photoshop habit &mdash; contrast isn't here.</p>
             </div>
             <div class="act-card good">
               <span class="act-label">&#10003; With GUIDE</span>
-              <img src="static/images/crop_colors_menu.jpg" alt="Agent opens GIMP's Colors menu and Brightness-Contrast" loading="lazy" width="795" height="1110">
+              <img src="static/images/anno_colors.jpg" alt="Annotated: agent follows the correct path through the Colors menu to Brightness-Contrast" loading="lazy" width="597" height="771">
               <p><span class="t-plan">Planning</span> points to <code>Colors &rarr; Brightness-Contrast</code>. Task succeeds.</p>
             </div>
           </div>
@@ -214,14 +236,14 @@
       </div>
       <div>
         <div class="bias-row plan">
-          <img src="static/images/crop_image_menu.jpg" alt="GIMP Image menu open, where there is no contrast control" loading="lazy" width="750" height="1013">
+          <img src="static/images/anno_image.jpg" alt="Annotated GIMP Image menu marked as the wrong menu with no contrast control" loading="lazy" width="609" height="699">
           <div>
             <span class="tag">Planning bias</span>
             <p>Knows "adjust brightness," but reaches for <code>Image&nbsp;&rarr;&nbsp;Adjustments</code> (a Photoshop habit). In GIMP, contrast lives under <code>Colors</code>.</p>
           </div>
         </div>
         <div class="bias-row ground">
-          <img src="static/images/crop_bc_dialog.jpg" alt="GIMP Brightness-Contrast dialog with similar-looking sliders" loading="lazy" width="585" height="510">
+          <img src="static/images/anno_bc.jpg" alt="Annotated GIMP dialog with the Contrast slider boxed as the target among similar sliders" loading="lazy" width="654" height="369">
           <div>
             <span class="tag">Grounding bias</span>
             <p>Recognizes "a slider," but cannot pick out the correct <b>Contrast</b> control among several visually similar ones.</p>
@@ -333,7 +355,7 @@
             <tr>
               <th class="l">Agent</th><th class="l">Type</th>
               <th>Baseline</th><th>+&thinsp;<span class="cfg-plan">Planning</span></th>
-              <th>+&thinsp;<span class="cfg-both"><span class="pp">Plan.</span>&amp;<span class="gg">Gnd.</span></span></th>
+              <th class="cfg-both-th">+&thinsp;<span class="c-plan">Plan.</span>&thinsp;&amp;&thinsp;<span class="c-gnd">Gnd.</span></th>
               <th>Gain</th>
             </tr>
           </thead>
@@ -448,14 +470,14 @@
     </div>
 
     <div class="tabpanel plan" id="qpanel-plan" role="tabpanel">
-      <img src="static/images/gimp_colors_menu.jpg" alt="GIMP Colors menu open with Brightness-Contrast highlighted" loading="lazy" class="zoomable">
+      <img src="static/images/anno_colors.jpg" alt="Annotated GIMP Colors menu: numbered boxes mark Colors and Brightness-Contrast along the correct path" loading="lazy" class="zoomable" width="597" height="771">
       <div>
         <span class="ktag">Planning knowledge</span>
-        <p>"In GIMP, contrast is under <b>Colors</b>, NOT the Image menu." The agent follows the workflow to <code>Colors &rarr; Brightness-Contrast</code> instead of the Photoshop-style <code>Image &rarr; Adjustments</code> it would otherwise guess.</p>
+        <p>"In GIMP, contrast is under <b>Colors</b>, NOT the Image menu." The agent follows the workflow <code>&#9312; Colors &rarr; &#9313; Brightness-Contrast</code> instead of the Photoshop-style <code>Image &rarr; Adjustments</code> it would otherwise guess.</p>
       </div>
     </div>
     <div class="tabpanel ground" id="qpanel-ground" role="tabpanel" hidden>
-      <img src="static/images/gimp_bc_dialog.jpg" alt="GIMP Brightness-Contrast dialog with the Contrast slider" loading="lazy" class="zoomable">
+      <img src="static/images/anno_bc.jpg" alt="Annotated GIMP Brightness-Contrast dialog: the Contrast slider is boxed as the grounding target, next to a visually similar Brightness slider" loading="lazy" class="zoomable" width="654" height="369">
       <div>
         <span class="ktag">Grounding knowledge</span>
         <p>"A horizontal bar labeled <b>Contrast</b>, beneath the Brightness slider." The description lets the agent pick the right control among several visually similar sliders, then drag to boost contrast.</p>

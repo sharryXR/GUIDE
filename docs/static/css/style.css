@@ -209,9 +209,27 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .ytcard .thumb::after { content: ""; position: absolute; inset: 0; margin: auto; width: 0; height: 0; border-left: 11px solid #fff; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
 .ytcard .score { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-style: normal; background: var(--stage-green); color: #fff; padding: 3px 8px; border-radius: var(--r-sm); font-size: 0.82rem; }
 
-.kf-pair { display: flex; align-items: center; gap: 16px; justify-content: center; }
-.kf-pair img { width: 44%; border-radius: var(--r-sm); border: 1px solid var(--hairline); box-shadow: var(--shadow-sm); }
-.kf-pair .act-arrow { font: 700 0.9rem 'JetBrains Mono', monospace; color: var(--ink); background: var(--surface-2); border: 1px solid var(--hairline); padding: 6px 10px; border-radius: var(--r-pill); white-space: nowrap; flex: none; }
+.kf-pair { display: flex; align-items: center; gap: 14px; justify-content: center; }
+.kf-pair img { width: 45%; border-radius: var(--r-sm); border: 1px solid var(--hairline); box-shadow: var(--shadow-sm); }
+.kf-pair .act-arrow { font: 700 0.74rem/1.35 'JetBrains Mono', monospace; color: var(--ink); background: var(--surface-2); border: 1px solid var(--hairline); padding: 8px 10px; border-radius: var(--r-md); text-align: center; flex: none; }
+.kf-pair .act-arrow i { font-style: italic; }
+
+/* RAG stages + subtitle snippet (Retrieve step) */
+.rag-stages { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 4px auto 12px; max-width: 660px; }
+.rag-st { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-pill); padding: 6px 12px; }
+.rag-st .tick { color: var(--stage-green); font-style: normal; font-weight: 700; }
+.rag-st em { font-style: normal; color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 0.86em; }
+.sub-snip { max-width: 560px; margin: 0 auto 14px; text-align: center; font-size: 0.86rem; color: #1a7a8c; }
+.sub-snip i { color: var(--ink-soft); }
+
+/* richer knowledge cards (Knowledge step) */
+.kcards .kcard { text-align: left; }
+.kcard .ksteps, .kcard .kels { margin: 8px 0 0; padding-left: 20px; font-size: 0.86rem; color: var(--ink); line-height: 1.5; }
+.kcard .ksteps li, .kcard .kels li { margin: 3px 0; }
+.kcard .kels { list-style: none; padding-left: 4px; }
+.kcard .kels li { padding-left: 14px; position: relative; }
+.kcard .kels li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--ground); }
+.kcard .knote { margin-top: 10px; font-size: 0.8rem; color: var(--plan); background: var(--surface); border-radius: var(--r-sm); padding: 7px 10px; }
 
 .kcards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 720px; margin: 18px auto 0; }
 .kcard { border-radius: var(--r-md); padding: 16px 18px; border: 1px solid var(--hairline); border-left-width: 6px; background: var(--surface); }
@@ -334,8 +352,8 @@ table.results caption { text-align: left; padding: 16px 18px 0; color: var(--mut
 .delta { color: var(--stage-green); font-weight: 700; font-size: 0.92em; }
 .delta.neg { color: var(--fail-red); }
 .cfg-plan { color: var(--plan); font-weight: 600; }
-.cfg-both .pp { color: var(--plan); font-weight: 600; }
-.cfg-both .gg { color: var(--ground); font-weight: 600; }
+.cfg-both-th .c-plan { color: var(--plan); font-weight: 600; }
+.cfg-both-th .c-gnd { color: var(--ground); font-weight: 600; }
 
 .callout { max-width: 760px; margin: 2.6rem auto 0; padding: 18px 26px; border-left: 3px solid; border-image: linear-gradient(var(--plan), var(--ground)) 1; background: var(--surface); font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 1.2rem; color: var(--ink); line-height: 1.5; }
 
