@@ -153,13 +153,19 @@
         </figure>
 
         <figure class="panel" id="lp4" data-step="4" role="tabpanel" aria-label="Act" hidden>
-          <div class="ba" data-state="before">
-            <img class="before" src="static/images/gimp_iron_gate.jpg" alt="Unguided agent opens the wrong Image menu" loading="lazy" width="1280" height="720">
-            <img class="after" src="static/images/gimp_colors_menu.jpg" alt="Guided agent opens the correct Colors menu" loading="lazy" width="1280" height="720">
-            <span class="verdict bad">&#10007; Image &rarr; Adjustments</span>
-            <span class="verdict good">&#10003; Colors &rarr; Brightness-Contrast</span>
+          <div class="act-compare">
+            <div class="act-card bad">
+              <span class="act-label">&#10007; Unguided</span>
+              <img src="static/images/crop_image_menu.jpg" alt="Agent opens GIMP's Image menu, which has no contrast control" loading="lazy" width="750" height="1013">
+              <p>Guesses <code>Image &rarr; Adjustments</code>, a Photoshop habit &mdash; contrast isn't here.</p>
+            </div>
+            <div class="act-card good">
+              <span class="act-label">&#10003; With GUIDE</span>
+              <img src="static/images/crop_colors_menu.jpg" alt="Agent opens GIMP's Colors menu and Brightness-Contrast" loading="lazy" width="795" height="1110">
+              <p><span class="t-plan">Planning</span> points to <code>Colors &rarr; Brightness-Contrast</code>. Task succeeds.</p>
+            </div>
           </div>
-          <p class="loop-cap">Unguided, the agent guesses the <b>Image</b> menu (a Photoshop habit). With <span class="t-plan">Planning</span> knowledge it goes to <b>Colors</b> &mdash; <span class="gain">+7.48 pp</span> on OSWorld.</p>
+          <p class="loop-cap">The agent navigates to the right menu instead of guessing &mdash; <span class="gain">+7.48 pp</span> on OSWorld.</p>
         </figure>
       </div>
 
@@ -208,14 +214,14 @@
       </div>
       <div>
         <div class="bias-row plan">
-          <img src="static/images/gimp_colors_menu.jpg" alt="GIMP Colors menu with Brightness-Contrast" loading="lazy">
+          <img src="static/images/crop_image_menu.jpg" alt="GIMP Image menu open, where there is no contrast control" loading="lazy" width="750" height="1013">
           <div>
             <span class="tag">Planning bias</span>
             <p>Knows "adjust brightness," but reaches for <code>Image&nbsp;&rarr;&nbsp;Adjustments</code> (a Photoshop habit). In GIMP, contrast lives under <code>Colors</code>.</p>
           </div>
         </div>
         <div class="bias-row ground">
-          <img src="static/images/gimp_bc_dialog.jpg" alt="GIMP Brightness-Contrast dialog sliders" loading="lazy">
+          <img src="static/images/crop_bc_dialog.jpg" alt="GIMP Brightness-Contrast dialog with similar-looking sliders" loading="lazy" width="585" height="510">
           <div>
             <span class="tag">Grounding bias</span>
             <p>Recognizes "a slider," but cannot pick out the correct <b>Contrast</b> control among several visually similar ones.</p>
