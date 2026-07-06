@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2603.26266"><img src="https://img.shields.io/badge/arXiv-2603.26266-b31b1b.svg" alt="arXiv"></a>
   <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-yellow" alt="Dataset"></a>
-  <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset"><img src="https://img.shields.io/badge/downloads%2Fmonth-488-yellow?logo=huggingface" alt="Hugging Face monthly downloads"></a>
+  <a href="https://huggingface.co/datasets/sharryXR/GUIDE-dataset"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fdatasets%2FsharryXR%2FGUIDE-dataset%3Fexpand%3Ddownloads&query=%24.downloads&label=downloads%2Fmonth&logo=huggingface&color=yellow" alt="Hugging Face monthly downloads"></a>
   <a href="https://github.com/sharryXR/GUIDE"><img src="https://img.shields.io/badge/GitHub-Code-blue?logo=github" alt="Code"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-Apache%202.0-green.svg" alt="License"></a>
 </p>
